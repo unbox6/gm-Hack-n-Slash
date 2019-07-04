@@ -175,6 +175,14 @@
             }
         },
         {
+            "Key": "3f8248f1-6401-4d2b-8f3d-cdf196626d01",
+            "Value": {
+                "id": "6d99f92d-5899-4a07-ae9e-332e6c7f5e43",
+                "resourcePath": "scripts\\move_and_collide\\move_and_collide.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "4182fb06-e04e-470a-bdf1-a0757a233107",
             "Value": {
                 "id": "d92d527f-3e18-434d-b03d-5727c100d081",
@@ -560,7 +568,7 @@
         }
     ],
     "script_order": [
-        
+        "3f8248f1-6401-4d2b-8f3d-cdf196626d01"
     ],
     "tutorial": ""
 }
