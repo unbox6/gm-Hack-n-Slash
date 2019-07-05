@@ -1,18 +1,6 @@
-if (state == "roll")
-{
-	image_index = 0;
-	state = "move";
-	sprite_index = s_skeleton_idle
-}
-
-if(state == "attack_one")
+if (state == "roll") or (state == "attack_one") or (state == "attack_two") or (state == "attack_three")
 {
 	image_index = 0;
 	state = "move";
 }
 
-if(state == "attack_two")
-{
-	image_index = 0;
-	state = "move";
-}
