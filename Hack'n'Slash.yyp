@@ -242,7 +242,7 @@
             "Key": "5763c57d-0f0f-4fe8-a9e7-5e43cc79b0ea",
             "Value": {
                 "id": "e5436270-e48e-43e0-92d6-af0f8ee82d33",
-                "resourcePath": "sprites\\s_knight_attack_strip12\\s_knight_attack_strip12.yy",
+                "resourcePath": "sprites\\s_knight_attack\\s_knight_attack.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -378,7 +378,7 @@
             "Key": "9b517257-38d8-4219-b8dc-83190f6d1ae8",
             "Value": {
                 "id": "582fd2a4-b5e0-4f0a-a46f-46573db8bfa5",
-                "resourcePath": "sprites\\s_knight_walk_strip4\\s_knight_walk_strip4.yy",
+                "resourcePath": "sprites\\s_knight_walk\\s_knight_walk.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -463,6 +463,14 @@
             }
         },
         {
+            "Key": "c3365e7f-3c86-4e82-b3db-c75bdd0b4b47",
+            "Value": {
+                "id": "349767bb-d71c-419c-82d9-c2b5e15f7a0e",
+                "resourcePath": "objects\\oKnight\\oKnight.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "10f1d3e1-e617-4048-90f0-13d538923b56",
@@ -490,7 +498,7 @@
             "Key": "d21411c4-2978-4c64-a0ea-d9c920e203f2",
             "Value": {
                 "id": "d78fb899-2942-4f30-bd85-61fa4daf916f",
-                "resourcePath": "sprites\\s_knight_idle_strip3\\s_knight_idle_strip3.yy",
+                "resourcePath": "sprites\\s_knight_idle\\s_knight_idle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -498,8 +506,16 @@
             "Key": "da6aa1b0-a6ed-472c-9f3f-218538539d38",
             "Value": {
                 "id": "c2852138-dea0-460e-9fb5-1ba22038db2e",
-                "resourcePath": "sprites\\s_knight_die_strip6\\s_knight_die_strip6.yy",
+                "resourcePath": "sprites\\s_knight_die\\s_knight_die.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "db438cf0-fd3c-473e-b6da-6df5b2c3e683",
+            "Value": {
+                "id": "78c29290-4902-4012-8cfe-0ea2b454c232",
+                "resourcePath": "scripts\\get_input\\get_input.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -567,6 +583,14 @@
             }
         },
         {
+            "Key": "f9cde6bb-f2f7-42ad-bac7-99d6b5f56660",
+            "Value": {
+                "id": "ebb9ad1b-2ef8-4ffc-aa1f-9b2ea27f4746",
+                "resourcePath": "objects\\oInput\\oInput.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f9e67162-960b-4792-80f4-c02a506103bc",
             "Value": {
                 "id": "08df7db3-1a3d-40c5-bf46-fb20b30b52c8",
@@ -586,7 +610,8 @@
     "script_order": [
         "3f8248f1-6401-4d2b-8f3d-cdf196626d01",
         "bade21e4-172a-479f-9702-9a69f12d8afe",
-        "2c11fad9-23c9-4eba-8de0-0d97634371e9"
+        "2c11fad9-23c9-4eba-8de0-0d97634371e9",
+        "db438cf0-fd3c-473e-b6da-6df5b2c3e683"
     ],
     "tutorial": ""
 }

@@ -1,17 +1,15 @@
-
-show_debug_message(state);
 switch (state)
 {
 	case "move":
 		#region move
-		if(keyboard_check(vk_left))
+		if(oInput.left)
 		{
 			move_and_collide(-4,0);
 			image_xscale = -1;
 			set_state_sprite(s_skeleton_run,0.7,0);
 		}
 
-		if(keyboard_check(vk_right))
+		if(oInput.right)
 		{
 	
 			move_and_collide(4,0);
@@ -21,15 +19,15 @@ switch (state)
 	
 		} 
 
-		if  (!keyboard_check(vk_left)) && (!keyboard_check(vk_right))
+		if  (!oInput.left) && (!oInput.right)
 		{
 			set_state_sprite(s_skeleton_idle, 0.9,0);
 		}
-		if(keyboard_check_pressed(vk_space))
+		if(oInput.roll)
 		{
 			state = "roll";
 		}
-		if(keyboard_check_pressed(ord("Z")))
+		if(oInput.attack)
 		{
 			state = "attack_one";
 		}
@@ -48,7 +46,7 @@ switch (state)
 	case "attack_one":
 		#region attack_one
 		set_state_sprite(s_skeleton_attack_one,0.6,0);
-		if(keyboard_check_pressed(ord("Z"))) and animation_hit_frame_range(2,4)
+		if(oInput.attack) and animation_hit_frame_range(2,4)
 		{
 			state = "attack_two";
 		}
@@ -57,7 +55,7 @@ switch (state)
 	case "attack_two":
 		#region attack_two
 		set_state_sprite(s_skeleton_attack_two,0.6,0);
-		if(keyboard_check_pressed(ord("Z"))) and animation_hit_frame_range(2,4)
+		if(oInput.attack) and animation_hit_frame_range(2,4)
 		{
 			state = "attack_three";
 		}
