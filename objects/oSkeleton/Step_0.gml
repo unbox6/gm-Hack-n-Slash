@@ -8,8 +8,7 @@ switch (state)
 		{
 			move_and_collide(-4,0);
 			image_xscale = -1;
-			sprite_index = s_skeleton_run
-			image_speed = 0.7
+			set_state_sprite(s_skeleton_run,0.7,0);
 		}
 
 		if(keyboard_check(vk_right))
@@ -17,7 +16,7 @@ switch (state)
 	
 			move_and_collide(4,0);
 			image_xscale = 1;
-			sprite_index = s_skeleton_run
+			set_state_sprite(s_skeleton_run,0.7,0);
 			
 	
 		} 
@@ -44,20 +43,25 @@ switch (state)
 		#region roll
 		if(!place_meeting(x + 4 * image_xscale, y, oWall))
 		{
-			sprite_index = s_skeleton_roll;
+			set_state_sprite(s_skeleton_roll,0.5,0);
 			x += 4.5 * image_xscale;
-			image_speed = 0.6;
 		}
 		#endregion
 		break;
 	case "attack_one":
 		#region attack_one
-		sprite_index = s_skeleton_attack_one;
-		image_speed = 0.6;
-	
+		set_state_sprite(s_skeleton_attack_one,0.6,0);
+		if(keyboard_check_pressed(ord("Z"))) and animation_hit_frame_range(2,4)
+		{
+			state = "attack_two";
+		}
 		#endregion
 		break;
-	
+	case "attack_two":
+		#region attack_two
+		set_state_sprite(s_skeleton_attack_two,0.6,0);
+		#endregion
+		break;
 }
 
 	

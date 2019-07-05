@@ -10,3 +10,9 @@ if(state == "attack_one")
 	image_index = 0;
 	state = "move";
 }
+
+if(state == "attack_two")
+{
+	image_index = 0;
+	state = "move";
+}
