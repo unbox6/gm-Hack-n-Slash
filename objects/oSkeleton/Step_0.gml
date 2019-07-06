@@ -41,7 +41,7 @@ switch (state)
 			set_state_sprite(s_skeleton_roll,0.5,0);
 			x += 4.5 * image_xscale;
 		}
-		if(animation_hit_frame(6))
+		if(animation_end())
 		{
 			state = "move";
 		}
@@ -54,6 +54,10 @@ switch (state)
 		{
 			state = "attack_two";
 		}
+		if(animation_end())
+		{
+			state = "move";
+		}
 		#endregion
 		break;
 	case "attack_two":
@@ -63,11 +67,18 @@ switch (state)
 		{
 			state = "attack_three";
 		}
+		if(animation_end()){
+			state = "move";
+		}
 		#endregion
 		break;
 	case "attack_three":
 		#region attack_three
 		set_state_sprite(s_skeleton_attack_three,0.6,0);
+		if(animation_end())
+		{
+			state = "move";
+		}
 		#endregion
 }
 
