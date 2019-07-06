@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "9bc68bd7-7e13-4a49-b6a3-21d51fbd095a",
+            "Value": {
+                "id": "5a101c47-c1dc-4d79-b4e3-9eb65bbfbcd7",
+                "resourcePath": "scripts\\animation_hit_frame\\animation_hit_frame.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9ebf82d9-90af-4a29-bb85-18746916b178",
             "Value": {
                 "id": "3fcc0264-9f0e-4dce-93e3-ade2161588ee",

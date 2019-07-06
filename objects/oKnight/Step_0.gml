@@ -1,6 +1,7 @@
 switch(state)
 {
 	case "chase":
+	#region chase
 		set_state_sprite(s_knight_walk, 0.4, 0);
 		if not instance_exists(oSkeleton) exit; // EXIT SAI DE TODOS OS EVENTOS
 		
@@ -11,15 +12,26 @@ switch(state)
 		}
 		
 		var distance_to_player = point_distance(x,y,oSkeleton.x,oSkeleton.y);
-		if distance_to_player > 42
+		if distance_to_player <= attack_range
 		{
 			
-			move_and_collide(image_xscale,0);
+			state = "attack";
 			
 		}
 		
+		else
+		{
+			move_and_collide(image_xscale * chase_speed,0);
+		}
+			
+		
+		#endregion
 		break;	
 	
-		
-	
+			
+	case "attack":
+		#region attack
+		set_state_sprite(s_knight_attack, 0.4, 0);
+		#endregion
+		break;
 }

@@ -41,6 +41,10 @@ switch (state)
 			set_state_sprite(s_skeleton_roll,0.5,0);
 			x += 4.5 * image_xscale;
 		}
+		if(animation_hit_frame(6))
+		{
+			state = "move";
+		}
 		#endregion
 		break;
 	case "attack_one":
