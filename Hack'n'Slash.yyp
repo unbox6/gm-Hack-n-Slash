@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "5ffc402b-faea-4dda-8425-5b7ef18f47a4",
+            "Value": {
+                "id": "edb816e2-1020-4c26-be5c-001f94036d17",
+                "resourcePath": "objects\\oLifeForm\\oLifeForm.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "67cd0107-2385-4340-a2ac-c5565f7474d3",
             "Value": {
                 "id": "ee5402fa-2917-40c7-83c8-1238dc2a2be6",
@@ -386,7 +394,7 @@
             "Key": "8d82f344-1e6b-440e-b258-54fbd1788d90",
             "Value": {
                 "id": "dd3677f2-32ca-418b-90a0-829edf0c0923",
-                "resourcePath": "sprites\\s_boss_attack_strip15\\s_boss_attack_strip15.yy",
+                "resourcePath": "sprites\\s_boss_attack\\s_boss_attack.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -586,7 +594,7 @@
             "Key": "ee8e87f8-c9b1-4863-a018-8c7909d75533",
             "Value": {
                 "id": "34773a80-6897-4bf9-9dcd-49ffdac26661",
-                "resourcePath": "sprites\\s_boss_walk_strip6\\s_boss_walk_strip6.yy",
+                "resourcePath": "sprites\\s_boss_walk\\s_boss_walk.yy",
                 "resourceType": "GMSprite"
             }
         },

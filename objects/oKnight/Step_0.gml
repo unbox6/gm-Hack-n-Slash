@@ -2,6 +2,7 @@ switch(state)
 {
 	case "chase":
 	#region chase
+	
 		set_state_sprite(s_knight_walk, 0.4, 0);
 		if not instance_exists(oSkeleton) exit; // EXIT SAI DE TODOS OS EVENTOS
 		
@@ -23,8 +24,7 @@ switch(state)
 		{
 			move_and_collide(image_xscale * chase_speed,0);
 		}
-			
-		
+
 		#endregion
 		break;	
 	
@@ -32,6 +32,14 @@ switch(state)
 	case "attack":
 		#region attack
 		set_state_sprite(s_knight_attack, 0.4, 0);
+		
+		if(animation_hit_frame(4))
+		{
+			
+			create_hitbox(x,y,self, s_skeleton_attack_one_damage,4,4,1,image_xscale);
+		
+		}
+		
 		if(animation_end())
 		{
 			state = "chase";

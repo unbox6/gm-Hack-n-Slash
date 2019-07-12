@@ -2,6 +2,7 @@ switch (state)
 {
 	case "move":
 		#region move
+		
 		if(oInput.left)
 		{
 			move_and_collide(-4,0);
@@ -11,22 +12,21 @@ switch (state)
 
 		if(oInput.right)
 		{
-	
 			move_and_collide(4,0);
 			image_xscale = 1;
 			set_state_sprite(s_skeleton_run,0.5,0);
-			
-	
 		} 
-
+		
 		if  (!oInput.left) && (!oInput.right)
 		{
 			set_state_sprite(s_skeleton_idle, 0.3,0);
 		}
+		
 		if(oInput.roll)
 		{
 			state = "roll";
 		}
+		
 		if(oInput.attack)
 		{
 			state = "attack_one";
@@ -54,7 +54,7 @@ switch (state)
 		if(animation_hit_frame(0))
 		{
 			
-			create_hitbox(x,y,self, s_skeleton_attack_one_damage,4,4,1,image_xscale);
+			create_hitbox(x,y,self, s_skeleton_attack_one_damage,4,4,5,image_xscale);
 			
 		}
 		
@@ -62,10 +62,12 @@ switch (state)
 		{
 			state = "attack_two";
 		}
+		
 		if(animation_end())
 		{
 			state = "move";
 		}
+		
 		#endregion
 		break;
 	case "attack_two":
@@ -75,7 +77,7 @@ switch (state)
 		if(animation_hit_frame(1))
 		{
 			
-			create_hitbox(x,y,self, s_skeleton_attack_two_damage,4,4,1,image_xscale);
+			create_hitbox(x,y,self, s_skeleton_attack_two_damage,4,4,10,image_xscale);
 			
 		}
 		
@@ -94,7 +96,7 @@ switch (state)
 		if(animation_hit_frame(2))
 		{
 			
-			create_hitbox(x,y,self, s_skeleton_attack_three_damage,4,4,1,image_xscale);
+			create_hitbox(x,y,self, s_skeleton_attack_three_damage,4,4,10,image_xscale);
 			
 		}
 		set_state_sprite(s_skeleton_attack_three,0.6,0);

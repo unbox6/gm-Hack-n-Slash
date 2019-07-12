@@ -1,6 +1,9 @@
-with(other)
+if(creator == noone or creator == other)
 {
-	instance_destroy();
+	exit;
+}
+else{
+	other.hp -= damage;
 }
 
 

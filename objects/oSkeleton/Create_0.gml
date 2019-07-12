@@ -1,2 +1,4 @@
+event_inherited();
+
 state = "move";
-instance_create_layer(0,0,"Instances",oInput);
+instance_create_layer(0 , 0, "Instances" , oInput);
