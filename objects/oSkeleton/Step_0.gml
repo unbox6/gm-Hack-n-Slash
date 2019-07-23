@@ -96,7 +96,7 @@ switch (state)
 		if(animation_hit_frame(2))
 		{
 			
-			create_hitbox(x,y,self, s_skeleton_attack_three_damage,4,4,10,image_xscale);
+			create_hitbox(x,y,self, s_skeleton_attack_three_damage,8,4,10,image_xscale);
 			
 		}
 		set_state_sprite(s_skeleton_attack_three,0.6,0);
@@ -105,6 +105,9 @@ switch (state)
 			state = "move";
 		}
 		#endregion
+	default:
+		show_debug_message("State " + state + " does not exists.");
+	break
 }
 
 	

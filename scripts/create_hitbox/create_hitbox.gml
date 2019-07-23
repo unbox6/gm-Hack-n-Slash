@@ -24,3 +24,4 @@ hitbox.knockback = knockback;
 hitbox.alarm[0] = lifespan;
 hitbox.damage = damage;
 hitbox.image_xscale = _xscale;
+hitbox.image_blend = c_red;

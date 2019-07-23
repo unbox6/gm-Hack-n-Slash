@@ -46,4 +46,22 @@ switch(state)
 		}
 		#endregion
 		break;
+	
+	#region knockback 
+	case "knockback":
+	set_state_sprite(s_knight_hitstun,0,0);
+	move_and_collide(knockback_speed,0);
+	knockback_speed = approach(knockback_speed,0,0.5);
+	image_xscale = -sign(knockback_speed);
+	if knockback_speed == 0
+	{
+		knockback_speed = 0;
+		state = "chase";
+	}
+	break;
+	#endregion
+	
+	default:
+		show_debug_message("State " + state + " does not exists.");
+	break;
 }
